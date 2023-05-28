@@ -1,16 +1,10 @@
 import React from "react";
-import logo from "./com";
-import logoImg from "./public/logoFaceRecgntn";
-
+import LogoImg from "../../Pictures/logo2.jpg";
+import styles from "./Logo.module.css";
 const Logo = () => {
   return (
-    <div className="ma4 mt0">
-      <img
-        src="...\public\logoFaceRecgntn.jpg"
-        alt="Girl in a jacket"
-        width="500"
-        height="600"
-      ></img>
+    <div className={styles.Logoimg}>
+      <img src={LogoImg} alt="Logo" className={styles.Img}></img>
     </div>
   );
 };
