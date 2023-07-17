@@ -18,6 +18,8 @@ class Signin extends React.Component {
   };
 
   onSubmitSignIn = () => {
+    console.log(this.state);
+
     fetch("http://localhost:3000/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -27,9 +29,8 @@ class Signin extends React.Component {
       }),
     })
       .then((response) => response.json())
-      .then((user) => {
-        if (user.id) {
-          this.props.loadUser(user);
+      .then((data) => {
+        if (data === "success") {
           this.props.onRouteChange("home");
         }
       });
